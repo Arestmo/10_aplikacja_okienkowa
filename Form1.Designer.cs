@@ -46,9 +46,9 @@
             this.label_char.AutoSize = true;
             this.label_char.Location = new System.Drawing.Point(113, 27);
             this.label_char.Name = "label_char";
-            this.label_char.Size = new System.Drawing.Size(20, 13);
+            this.label_char.Size = new System.Drawing.Size(15, 13);
             this.label_char.TabIndex = 0;
-            this.label_char.Text = " \"\"";
+            this.label_char.Text = " \"";
             // 
             // Button_add
             // 
@@ -58,6 +58,7 @@
             this.Button_add.TabIndex = 1;
             this.Button_add.Text = "Dodawanie";
             this.Button_add.UseVisualStyleBackColor = true;
+            this.Button_add.Click += new System.EventHandler(this.Button_add_Click);
             // 
             // Button_substract
             // 
@@ -67,35 +68,43 @@
             this.Button_substract.TabIndex = 2;
             this.Button_substract.Text = "Odejmowanie";
             this.Button_substract.UseVisualStyleBackColor = true;
+            this.Button_substract.Click += new System.EventHandler(this.Button_substract_Click);
             // 
             // Button_multiply
             // 
-            this.Button_multiply.Location = new System.Drawing.Point(139, 64);
+            this.Button_multiply.Location = new System.Drawing.Point(134, 64);
             this.Button_multiply.Name = "Button_multiply";
             this.Button_multiply.Size = new System.Drawing.Size(75, 23);
             this.Button_multiply.TabIndex = 3;
             this.Button_multiply.Text = "Mnożenie";
             this.Button_multiply.UseVisualStyleBackColor = true;
+            this.Button_multiply.Click += new System.EventHandler(this.Button_multiply_Click);
             // 
             // Button_divide
             // 
-            this.Button_divide.Location = new System.Drawing.Point(139, 93);
+            this.Button_divide.Location = new System.Drawing.Point(134, 93);
             this.Button_divide.Name = "Button_divide";
             this.Button_divide.Size = new System.Drawing.Size(75, 23);
             this.Button_divide.TabIndex = 4;
             this.Button_divide.Text = "Dzielenie";
             this.Button_divide.UseVisualStyleBackColor = true;
+            this.Button_divide.Click += new System.EventHandler(this.Button_divide_Click);
             // 
             // Number_first
             // 
             this.Number_first.Location = new System.Drawing.Point(32, 25);
+            this.Number_first.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.Number_first.Name = "Number_first";
             this.Number_first.Size = new System.Drawing.Size(75, 20);
             this.Number_first.TabIndex = 5;
             // 
             // Number_second
             // 
-            this.Number_second.Location = new System.Drawing.Point(139, 25);
+            this.Number_second.Location = new System.Drawing.Point(134, 25);
             this.Number_second.Name = "Number_second";
             this.Number_second.Size = new System.Drawing.Size(75, 20);
             this.Number_second.TabIndex = 6;
@@ -103,7 +112,7 @@
             // Label_result
             // 
             this.Label_result.AutoSize = true;
-            this.Label_result.Location = new System.Drawing.Point(32, 123);
+            this.Label_result.Location = new System.Drawing.Point(29, 123);
             this.Label_result.Name = "Label_result";
             this.Label_result.Size = new System.Drawing.Size(37, 13);
             this.Label_result.TabIndex = 7;
@@ -113,14 +122,14 @@
             // 
             this.Text_result.Location = new System.Drawing.Point(32, 139);
             this.Text_result.Name = "Text_result";
-            this.Text_result.Size = new System.Drawing.Size(182, 20);
+            this.Text_result.Size = new System.Drawing.Size(177, 20);
             this.Text_result.TabIndex = 8;
             // 
             // Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 407);
+            this.ClientSize = new System.Drawing.Size(253, 190);
             this.Controls.Add(this.Text_result);
             this.Controls.Add(this.Label_result);
             this.Controls.Add(this.Number_second);
